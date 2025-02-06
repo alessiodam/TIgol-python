@@ -188,7 +188,7 @@ class TIgolApiClient:
 
         user_url = f"{self.api_base_url}/auth/v1/user/update-bio"
         headers = {"Authorization": f"Bearer {auth.access_token}"}
-        response = self._session.put(user_url, headers=headers, json={"bio": new_bio})
+        response = self._session.post(user_url, headers=headers, json={"bio": new_bio})
         response.raise_for_status()
 
         return True
@@ -259,7 +259,7 @@ class TIgolApiClient:
                 )
             payload["expires_in"] = expires_in
 
-        response = self._session.put(user_url, headers=headers, json=payload)
+        response = self._session.post(user_url, headers=headers, json=payload)
         response.raise_for_status()
 
         return True
