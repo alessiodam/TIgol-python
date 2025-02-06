@@ -1,6 +1,6 @@
 [project]
 name = "tigol"
-version = "0.0.3"
+version = "1.0.0"
 authors = [
   { name="Alessio D'Ambrosio", email="alessio.dambrosio@tigol.net" },
 ]
